@@ -38,21 +38,21 @@ jobs:
           mkdir -p src/main/resources
           cd src/main/resources
           pwd
-          echo "${{ secrets.PRODUCTION_APPLICATION_PROPERTIES }}" > application.properties
+          echo "${{ secrets.DEPLOY_APPLICATION_PROPERTIES }}" > application.properties
 
       - name: Create cors.properties for CD Deploy
         run: |
           mkdir -p src/main/resources
           cd src/main/resources
           pwd
-          echo "${{ secrets.PRODUCTION_CORS_PROPERTIES }}" > cors.properties
+          echo "${{ secrets.DEPLOY_CORS_PROPERTIES }}" > cors.properties
           
       - name: Create redis.properties for CD Deploy
         run: |
           mkdir -p src/main/resources
           cd src/main/resources
           pwd
-          echo "${{ secrets.PRODUCTION_REDIS_PROPERTIES }}" > redis.properties
+          echo "${{ secrets.DEPLOY_REDIS_PROPERTIES }}" > redis.properties
           
       - name: Create mysql.properties for CD Deploy
         run: |
